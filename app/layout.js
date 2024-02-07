@@ -1,50 +1,76 @@
-import './globals.css';
-import { Inter } from 'next/font/google';
-import Image from 'next/image';
-import Link from 'next/link';
-import logo from '../public/logo.png';
-
-const inter = Inter({ subsets: ['latin'] });
+import './globals.css'; // Import global CSS styles
+import Image from 'next/image'; // Import Next.js Image component
+import Link from 'next/link'; // Import Next.js Link component
+import logo from '../public/images/logo.png'; // Import logo image
 
 export const metadata = {
+  // Metadata for the page
   title: {
-    default: 'Home page | Candle Cove',
-    template: '%s | Candle Cove',
+    default: 'Home page | Candle Cove', // Default title
+    template: '%s | Candle Cove', // Title template
   },
-  description: 'Elevate Your Space with Candle Cove',
+  description: 'Elevate Your Space with Candle Cove', // Page description
 };
 
 export default function RootLayout({ children }) {
+  // Root layout component
   return (
     <html lang="en">
-      <body className={inter.className}>
-        <header className="relative">
-          <div className="border border-gray-300 shadow-md flex justify-center items-center bg-gray-100 h-16">
-            <div className="">
-              <Image
-                src={logo}
-                alt="Logo"
-                className="absolute top-0 left-0 w-52 h-auto z-10"
-              />
-            </div>
-            <nav className="flex justify-center items-center space-x-40">
-              <Link href="/" className=" mb-5">
-                Home
-              </Link>
-              <Link href="/about" className=" mb-5">
-                About
-              </Link>
-              <Link href="/ourcandles" className="mb-5">
-                Our Candles
-              </Link>
-              <Link href="/help" className="mb-5">
-                Help
-              </Link>
-            </nav>
-          </div>
+      <body className="">
+        {' '}
+        {/* Apply Inter font class */}
+        <header className="border border-gray-300 shadow-md flex justify-center items-center bg-gray-100 min-h-24">
+          {' '}
+          {/* Header container */}
+          <Image
+            src={logo} // Logo image source
+            alt="Logo" // Alt attribute for accessibility
+            className="absolute top-0 left-0 w-40 h-auto z-10" // Logo image styles
+          />
+          <nav className="flex justify-center items-center space-x-40 font-serif">
+            {/* Navigation container */}
+            <Link
+              href="/"
+              className="mb-5 hover:border-b-2 hover:border-beige-300"
+            >
+              {/* Home link */}
+              Home
+            </Link>
+            <Link
+              href="/about"
+              className="mb-5 hover:border-b-2 hover:border-beige-300"
+            >
+              {/* About link */}
+              About
+            </Link>
+            <Link
+              href="/ourcandles"
+              className="mb-5 hover:border-b-2 hover:border-beige-300"
+            >
+              {/* Our Candles link */}
+              Our Candles
+            </Link>
+            <Link
+              href="/help"
+              className="mb-5 hover:border-b-2 hover:border-beige-300"
+            >
+              {/* Help link */}
+              Help
+            </Link>
+            <Link
+              href="/cart"
+              className="mb-5 hover:border-b-2 hover:border-beige-300"
+            >
+              {/* Cart link */}
+              Cart
+            </Link>
+          </nav>
         </header>
-        <main>{children}</main>
-        <footer>Hello Footer</footer>
+        <main>{children}</main> {/* Main content section */}
+        <footer className="border border-gray-300 shadow-md flex justify-center items-center bg-gray-100 min-h-24">
+          Hello Footer
+        </footer>{' '}
+        {/* Footer section */}
       </body>
     </html>
   );
