@@ -28,16 +28,16 @@ Technical TODOs:
 
 Pages Setup:
 Create Pages:
-[]Create Products page component.
-[]Create Single Product page component.
-[]Create Cart page component.
-[]Create Checkout page component.
-[]Create Thank You page component.
+[x]Create Products page component.
+[x]Create Single Product page component.
+[x]Create Cart page component.
+[x]Create Checkout page component.
+[x]Create Thank You page component.
 
 Products Page:
 List Products:
-[]Fetch product data from the database.
-[]Display at least 4 different products.
+[x]Fetch product data from the database.
+[x]Display at least 4 different products.
 []Ensure each product is linked to its single product page.
 []Add relevant h1 element to the page.
 []Add data-test-id="products-link" to the header link to navigate to the Products page.
