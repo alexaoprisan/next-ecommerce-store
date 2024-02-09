@@ -67,7 +67,7 @@ export default function RootLayout({ children }) {
           </nav>
         </header>
         <main>{children}</main> {/* Main content section */}
-        <footer className="border border-gray-300 shadow-md flex justify-center items-center bg-gray-100 min-h-24">
+        <footer className="border border-gray-300 shadow-md flex justify-center items-center bg-gray-100 min-h-24 font-serif">
           Hello Footer
         </footer>{' '}
         {/* Footer section */}

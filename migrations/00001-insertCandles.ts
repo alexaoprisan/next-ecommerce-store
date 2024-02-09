@@ -4,50 +4,50 @@ const candles = [
   {
     id: 1,
     productName: 'Elegant Lucia',
-    product_description: 'pillar Candle',
+    productDescription: 'pillar Candle',
     price: 5,
   },
   {
     id: 2,
     productName: 'Sparkly Amber',
-    product_description: 'pinetree Candle',
+    productDescription: 'pinetree Candle',
     price: 7,
   },
 
   {
     id: 3,
     productName: 'Divine Dora',
-    product_description: 'rounded Candle',
+    productDescription: 'rounded Candle',
     price: 5,
   },
   {
     id: 4,
     productName: 'Classic Berta',
-    product_description: 'stick Candle',
+    productDescription: 'stick Candle',
     price: 2,
   },
   {
     id: 5,
     productName: 'Zen Nora',
-    product_description: 'bubble pinetree Candle',
+    productDescription: 'bubble pinetree Candle',
     price: 8,
   },
   {
     id: 6,
     productName: 'Sophisticated Jess',
-    product_description: 'ball Candle',
+    productDescription: 'ball Candle',
     price: 5,
   },
   {
     id: 7,
     productName: 'Flaming Agatha',
-    product_description: 'wavy Candle',
+    productDescription: 'wavy Candle',
     price: 4,
   },
   {
     id: 8,
     productName: 'Bubbly Billy',
-    product_description: 'bubble Candle',
+    productDescription: 'bubble Candle',
     price: 7,
   },
 ];
@@ -64,7 +64,7 @@ export async function up(sql: Sql) {
       VALUES
         (
           ${candle.productName},
-          ${candle.product_description},
+          ${candle.productDescription},
           ${candle.price}
         )
     `;

@@ -3,7 +3,7 @@ import { Sql } from 'postgres';
 export type Candle = {
   id: number;
   productName: string;
-  product_description: string;
+  productDescription: string;
   price: number;
 };
 

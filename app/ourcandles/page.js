@@ -13,10 +13,10 @@ export default async function CandlesPage() {
   return (
     <div>
       These are my candles
-      <div className="flex flex-wrap justify-center">
+      <div className="flex flex-wrap justify-center ">
         {candles.map((candle) => {
           return (
-            <div key={`candles-${candle.id}`} className="m-6">
+            <div key={`candles-${candle.id}`} className="m-6 w-64 h-100">
               <Link href={`/ourcandles/${candle.id}`}>
                 <div>{candle.productName}</div>
                 <Image

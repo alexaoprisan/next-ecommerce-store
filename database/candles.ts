@@ -43,7 +43,7 @@ export const createCandleInsecure = cache(
       VALUES
         (
           ${newProduct.productName},
-          ${newProduct.product_description},
+          ${newProduct.productDescription},
           ${newProduct.price}
         )
       RETURNING
@@ -59,7 +59,7 @@ export const updateCandleInsecure = cache(async (updatedCandle: Candle) => {
     UPDATE candles
     SET
       product_name = ${updatedCandle.productName},
-      product_description = ${updatedCandle.product_description},
+      product_description = ${updatedCandle.productDescription},
       price = ${updatedCandle.price}
     WHERE
       id = ${updatedCandle.id}
