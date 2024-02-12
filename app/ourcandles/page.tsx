@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { getCandlesInsecure } from '../../database/candles.ts';
+import { getCandlesInsecure } from '../../database/candles';
 
 export const metadata = {
   title: 'Our Candles',

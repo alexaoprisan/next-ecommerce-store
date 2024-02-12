@@ -38,7 +38,7 @@ Products Page:
 List Products:
 [x]Fetch product data from the database.
 [x]Display at least 4 different products.
-[]Ensure each product is linked to its single product page.
+[x]Ensure each product is linked to its single product page.
 []Add relevant h1 element to the page.
 []Add data-test-id="products-link" to the header link to navigate to the Products page.
 

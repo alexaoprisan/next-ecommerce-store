@@ -1,5 +1,5 @@
 import Image from 'next/image';
-// import { notFound } from 'next/navigation';
+import { notFound } from 'next/navigation';
 import { getCandleInsecure } from '../../../database/candles';
 
 type Props = {
@@ -18,9 +18,9 @@ export async function generateMetadata(props: Props) {
 export default async function Candle(props: Props) {
   const singleCandle = await getCandleInsecure(props.params.candleId);
 
-  // if (!singleCandle) {
-  //   notFound();
-  // }
+  if (!singleCandle) {
+    notFound();
+  }
 
   return (
     <div>
@@ -31,6 +31,7 @@ export default async function Candle(props: Props) {
         alt={singleCandle.productName}
         width={300}
         height={200}
+        data-test-id="product-image"
       />
       This is a nice candle.
     </div>
