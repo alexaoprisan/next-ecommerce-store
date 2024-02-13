@@ -4,10 +4,11 @@ import React from 'react';
 import { getCandlesInsecure } from '../../database/candles';
 import { getCookie } from '../../util/cookies';
 import { parseJson } from '../../util/json';
+import RemoveButton from './deletebutton';
 
 export const metadata = {
-  title: { default: 'Our Candles' },
-  description: 'Elevate Your Space with Candle Cove.',
+  title: { default: 'Cart Page' },
+  description: 'Cart Pages is showing all selected Candles',
 };
 
 export default async function CartPage() {
@@ -34,46 +35,69 @@ export default async function CartPage() {
   );
 
   return (
-    <div className="addstyleshere">
+    <div className="sectioncontainerstyle">
       <div>
         <h1>Your Cart:</h1>
       </div>
-      <div className="addstylehere">
+      <div className="anothercontainerstyle">
         {candlesInCart.map((candle) => {
           return (
-            <div key={`candles-${candle.id}`}>
+            <div
+              key={`candles-${candle.id}`}
+              data-test-id={`cart-product-${candle.id}`}
+              className="styleitem"
+            >
               <Link
-                href={`/candles/${candle.id}`}
-                data-test-id={`product-${candle.id}`}
-                className="addstylehere"
+                href={`/ourcandles/${candles.id}`}
+                data-test-id={`product-${candles.id}`}
               >
                 <Image
-                  src={candle.image}
+                  src={candles.image}
                   width={250}
                   height={300}
-                  alt={candle.title}
-                  className="stylehere"
+                  alt={candles.title}
+                  className="styletheimage"
                 />
-                <div className="stylehere">
-                  <div className="stylehere">
-                    <h2>{candle.title}</h2>
-                  </div>
-                  <div>
-                    <div data-test-id="product-price">
-                      Price: € {candle.price}
-                    </div>
-                    <div>Quantity: {candle.quantity}</div>
-                    <div>Total costs: € {candle.price * candle.quantity}</div>
-                  </div>
-                  <br />
-                </div>
               </Link>
+              <div className="stylehere">
+                <div className="styletheheadline">
+                  <h2>{candles.title}</h2>
+                </div>
+                <div>
+                  <div data-test-id="product-price">
+                    Price: € {candles.price}
+                  </div>
+                  <div data-test-id={`cart-product-quantity-${candles.id}`}>
+                    Quantity: {candles.quantity}
+                  </div>
+                  <div>Total cost: € {candles.price * candles.quantity}</div>
+                </div>
+                <div data-test-id={`cart-product-remove-${candles.id}`}>
+                  <RemoveButton candle={candles} />
+                </div>
+                <br />
+              </div>
+              {/* </Link> */}
             </div>
           );
         })}
       </div>
-      <div className="addstylehere" />
-      <div className="addstylehere">Total Price: € {totalPrice}</div>
+      <div className="addstyle" />
+      <div className="stylecheckoutsection">
+        <div className="addtotalpricestyle" data-test-id="cart-total">
+          Total Price: € {totalPrice}
+        </div>
+        <div>
+          <Link
+            href="/checkout"
+            type="button"
+            data-test-id="cart-checkout"
+            className="stylescheckoutbutton"
+          >
+            Checkout
+          </Link>
+        </div>
+      </div>
     </div>
   );
 }

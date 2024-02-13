@@ -1,6 +1,9 @@
 import Image from 'next/image';
 import { notFound } from 'next/navigation';
 import { getCandleInsecure } from '../../../database/candles';
+import { getCookie } from '../../../util/cookies';
+import { parseJson } from '../../util/json'; //comes from util/json?
+import SetQuantityForm from './SetQuantityForm';
 
 type Props = {
   params: {
@@ -22,6 +25,17 @@ export default async function Candle(props: Props) {
     notFound();
   }
 
+  // get cookie and parse it
+  const candlesQuantityCookie = getCookie('quantityCookie');
+
+  const candlesQuantity = !candlesQuantityCookie
+    ? []
+    : parseJson(candlesQuantityCookie);
+
+  const quantitiesToDisplay = candlesQuantity.find((candleQuantity) => {
+    return candleQuantity.id === singleCandle.id;
+  });
+
   return (
     <div>
       Single candle page
@@ -33,6 +47,7 @@ export default async function Candle(props: Props) {
         height={200}
         data-test-id="product-image"
       />
+      <SetQuantityForm />
       This is a nice candle.
     </div>
   );

@@ -1,10 +1,12 @@
 'use client';
 
+import { useRouter } from 'next/navigation';
 import React, { useState } from 'react';
 import { addToCart } from './actions';
 
-export default function SetQuantityForm(props) {
-  const [quantity, setQuantity] = useState(1); // Initialize quantity state to 1
+export default function SetQuantityForm(props: Props) {
+  const [quantity, setQuantity] = useState(1);
+  const router = useRouter();
 
   return (
     <div>
@@ -12,7 +14,7 @@ export default function SetQuantityForm(props) {
         <select
           value={quantity}
           onChange={(event) => setQuantity(Number(event.currentTarget.value))}
-          className="stylehere"
+          className="quantitystyle"
           data-test-id="product-quantity"
         >
           <option value="1">1</option>
@@ -27,8 +29,10 @@ export default function SetQuantityForm(props) {
           <option value="5">10</option>
         </select>
         <button
-          onClick={async () => await addToCart(props.candleId, quantity)}
-          className="mt-2 py-2 px-4 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none focus:bg-blue-600"
+          formAction={async () => {
+            router.refresh();
+            await addToCart(props.candleId, quantity);
+          }}
         >
           Add to Cart
         </button>
