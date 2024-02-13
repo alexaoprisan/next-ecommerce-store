@@ -39,24 +39,24 @@ List Products:
 [x]Fetch product data from the database.
 [x]Display at least 4 different products.
 [x]Ensure each product is linked to its single product page.
-[]Add relevant h1 element to the page.
-[]Add data-test-id="products-link" to the header link to navigate to the Products page.
+[x]Add relevant h1 element to the page.
+[x]Add data-test-id="products-link" to the header link to navigate to the Products page.
 
 Single Product Page:
 Display Product:
-[]Retrieve product details based on the product ID from the URL.
-[]Display product name inside an h1 element.
-[]Display product image with data-test-id="product-image".
-[]Display product price inside an element with data-test-id="product-price".
-[]Add quantity input with data-test-id="product-quantity".
-[]Implement add to cart functionality with data-test-id="product-add-to-cart".
+[x]Retrieve product details based on the product ID from the URL.
+[x]Display product name inside an h1 element.
+[x]Display product image with data-test-id="product-image".
+[x]Display product price inside an element with data-test-id="product-price".
+[x]Add quantity input with data-test-id="product-quantity".
+[x]Implement add to cart functionality with data-test-id="product-add-to-cart".
 
 Cart Page:
 Manage Cart:
-[]Display all items added to the cart.
-[]Display quantity of each item with data-test-id="cart-product-quantity-<product id>".
-[]Display product subtotal (price × quantity).
-[]Implement remove button for each item with data-test-id="cart-product-remove-<product id>".
+[x]Display all items added to the cart.
+[x]Display quantity of each item with data-test-id="cart-product-quantity-<product id>".
+[x]Display product subtotal (price × quantity).
+[x]Implement remove button for each item with data-test-id="cart-product-remove-<product id>".
 []Display total price with data-test-id="cart-total".
 []Implement checkout button with data-test-id="cart-checkout".
 

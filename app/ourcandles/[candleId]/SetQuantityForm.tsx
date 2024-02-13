@@ -32,7 +32,9 @@ export default function SetQuantityForm(props: Props) {
           formAction={async () => {
             router.refresh();
             await addToCart(props.candleId, quantity);
+            alert('Product added to cart!');
           }}
+          data-test-id="product-add-to-cart"
         >
           Add to Cart
         </button>

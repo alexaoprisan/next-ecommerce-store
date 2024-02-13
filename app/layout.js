@@ -2,6 +2,7 @@ import './globals.css'; // Import global CSS styles
 import Image from 'next/image'; // Import Next.js Image component
 import Link from 'next/link'; // Import Next.js Link component
 import logo from '../public/images/logo.png'; // Import logo image
+import CookieBanner from './CookieBanner';
 
 export const metadata = {
   // Metadata for the page
@@ -66,6 +67,7 @@ export default function RootLayout({ children }) {
             </Link>
           </nav>
         </header>
+        <CookieBanner />
         <main>{children}</main> {/* Main content section */}
         <footer className="border border-gray-300 shadow-md flex justify-center items-center bg-gray-100 min-h-24 font-serif">
           Hello Footer

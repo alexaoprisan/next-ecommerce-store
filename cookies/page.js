@@ -1,4 +1,4 @@
-import SetQuantityForm from '../ourcandles/[candleId]/SetQuantityForm';
+import SetQuantityForm from '../app/ourcandles/[candleId]/SetQuantityForm';
 import { getCookie } from '../util/cookies.ts';
 
 export default function SetCookiePage() {

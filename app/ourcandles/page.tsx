@@ -25,6 +25,7 @@ export default async function CandlesPage() {
                   height={200}
                   alt={candle.productName}
                 />
+                <div data-test-id="product-price">Price: {candle.price} €</div>
               </Link>
             </div>
           );

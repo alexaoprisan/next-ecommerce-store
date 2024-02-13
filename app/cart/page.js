@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
-import { getCandlesInsecure } from '../../database/candles';
+import { getCandleInsecure, getCandlesInsecure } from '../../database/candles';
 import { getCookie } from '../../util/cookies';
 import { parseJson } from '../../util/json';
 import RemoveButton from './deletebutton';
@@ -48,32 +48,32 @@ export default async function CartPage() {
               className="styleitem"
             >
               <Link
-                href={`/ourcandles/${candles.id}`}
-                data-test-id={`product-${candles.id}`}
+                href={`/ourcandles/${candle.id}`}
+                data-test-id={`product-${candle.id}`}
               >
                 <Image
-                  src={candles.image}
+                  src={`/images/${candle.productName.toLowerCase().replace(/\s/g, '')}.JPG`}
                   width={250}
                   height={300}
-                  alt={candles.title}
+                  alt={candle.title}
                   className="styletheimage"
+                  data-test-id="product-image"
                 />
               </Link>
               <div className="stylehere">
                 <div className="styletheheadline">
-                  <h2>{candles.title}</h2>
+                  <h2>{candle.title}</h2>
                 </div>
                 <div>
                   <div data-test-id="product-price">
-                    Price: € {candles.price}
+                    Price: € {candle.price}
                   </div>
-                  <div data-test-id={`cart-product-quantity-${candles.id}`}>
-                    Quantity: {candles.quantity}
+                  <div data-test-id={`cart-product-quantity-${candle.id}`}>
+                    Quantity: {candle.quantity}
                   </div>
-                  <div>Total cost: € {candles.price * candles.quantity}</div>
                 </div>
-                <div data-test-id={`cart-product-remove-${candles.id}`}>
-                  <RemoveButton candle={candles} />
+                <div data-test-id={`cart-product-remove-${candle.id}`}>
+                  <RemoveButton candle={candle} />
                 </div>
                 <br />
               </div>
@@ -85,7 +85,7 @@ export default async function CartPage() {
       <div className="addstyle" />
       <div className="stylecheckoutsection">
         <div className="addtotalpricestyle" data-test-id="cart-total">
-          Total Price: € {totalPrice}
+          Total: {totalPrice} €
         </div>
         <div>
           <Link

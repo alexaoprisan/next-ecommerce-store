@@ -2,7 +2,7 @@ import { cookies } from 'next/headers';
 
 // Optional chaining operator, if cookies().get('testCookie') is undefined return undefined
 
-export function getCookie(name) {
+export function getCookie(name: string) {
   // const cookie = cookies().get(name);
   // if (!cookie) {
   //   return undefined;
