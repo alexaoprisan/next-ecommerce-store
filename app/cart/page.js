@@ -8,7 +8,7 @@ import RemoveButton from './deletebutton';
 
 export const metadata = {
   title: { default: 'Cart Page' },
-  description: 'Cart Pages is showing all selected Candles',
+  description: 'Cart Page is showing all selected Candles',
 };
 
 export default async function CartPage() {

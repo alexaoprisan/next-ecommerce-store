@@ -19,8 +19,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className="">
         {' '}
-        {/* Apply Inter font class */}
-        <header className="border border-gray-300 shadow-md flex justify-center items-center bg-gray-100 min-h-24">
+        <header className="border border-gray-300 shadow-md flex justify-center items-center bg-gray-100 min-h-24 relative">
           {' '}
           {/* Header container */}
           <Image
@@ -70,7 +69,7 @@ export default function RootLayout({ children }) {
         <CookieBanner />
         <main>{children}</main> {/* Main content section */}
         <footer className="border border-gray-300 shadow-md flex justify-center items-center bg-gray-100 min-h-24 font-serif">
-          Hello Footer
+          © Candle Cove by Johanna-Maria-Alexandra-Oprisan
         </footer>{' '}
         {/* Footer section */}
       </body>

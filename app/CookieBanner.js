@@ -16,23 +16,26 @@ export default function CookieBanner() {
     }
   }, []);
 
+  const handleAcceptCookies = () => {
+    setLocalStorage('cookiePolicy', JSON.stringify(true));
+    setAreCookiesAccepted(true);
+  };
+
   return (
     <div>
-      <div
-        className={`stylecookiebanner ${areCookiesAccepted ? 'closed' : 'open'}`}
-      >
-        {' '}
-      </div>
-      <div>Do you accept the use of cookies?</div>
-      <button
-        className="stylencookiebutton"
-        onClick={() => {
-          setLocalStorage('cookiePolicy', JSON.stringify(true));
-          setAreCookiesAccepted(true);
-        }}
-      >
-        Accept
-      </button>
+      {!areCookiesAccepted && (
+        <div className="fixed top-4 right-4 bg-white p-4 rounded-md shadow-md">
+          <div className="font-serif text-gray-800">
+            Do you accept the use of cookies?
+          </div>
+          <button
+            className="stylencookiebutton bg-blue-500 text-white px-4 py-2 rounded-md mt-2"
+            onClick={handleAcceptCookies}
+          >
+            Accept
+          </button>
+        </div>
+      )}
     </div>
   );
 }

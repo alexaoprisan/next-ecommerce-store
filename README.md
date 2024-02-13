@@ -57,8 +57,8 @@ Manage Cart:
 [x]Display quantity of each item with data-test-id="cart-product-quantity-<product id>".
 [x]Display product subtotal (price × quantity).
 [x]Implement remove button for each item with data-test-id="cart-product-remove-<product id>".
-[]Display total price with data-test-id="cart-total".
-[]Implement checkout button with data-test-id="cart-checkout".
+[x]Display total price with data-test-id="cart-total".
+[x]Implement checkout button with data-test-id="cart-checkout".
 
 Checkout Page:
 Collect Information:
@@ -69,14 +69,14 @@ Collect Information:
 
 Cookies:
 Set up Cookie Management:
-[]Use cart cookie to store cart information.
-[]Implement security measures to prevent unauthorized modifications.
+[x]Use cart cookie to store cart information.
+[x]Implement security measures to prevent unauthorized modifications.
 
 Database:
 Database Configuration:
-[]Set up PostgreSQL database.
-[]Create necessary tables for storing product and user data.
-[]Establish connection and perform CRUD operations.
+[x]Set up PostgreSQL database.
+[x]Create necessary tables for storing product and user data.
+[x]Establish connection and perform CRUD operations.
 
 TypeScript / JSDoc:
 Type Definitions:
