@@ -55,14 +55,14 @@ export default async function CartPage() {
                   src={`/images/${candle.productName.toLowerCase().replace(/\s/g, '')}.JPG`}
                   width={250}
                   height={300}
-                  alt={candle.title}
+                  alt={candle.productName}
                   className="styletheimage"
                   data-test-id="product-image"
                 />
               </Link>
               <div className="stylehere ml-4 flex-grow">
                 <div className="styletheheadline">
-                  <h2>{candle.title}</h2>
+                  <h2>{candle.productName}</h2>
                 </div>
                 <div>
                   <div data-test-id="product-price">

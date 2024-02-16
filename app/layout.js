@@ -19,7 +19,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className="font-light">
         {' '}
-        <header className="border border-gray-300 shadow-md flex justify-center items-center bg-gray-100 min-h-24 relative">
+        <header className="border border-gray-300 shadow-md flex justify-center items-center bg-gray-100 min-h-24 relative ">
           {' '}
           {/* Header container */}
           <Image
@@ -27,32 +27,32 @@ export default function RootLayout({ children }) {
             alt="Logo" // Alt attribute for accessibility
             className="absolute top-0 left-0 w-40 h-auto z-10" // Logo image styles
           />
-          <nav className="flex justify-center items-center space-x-36 font-serif">
+          <nav className="flex justify-center items-center space-x-36 font-light">
             {/* Navigation container */}
             <Link
               href="/"
-              className="mb-5 hover:border-b-2 hover:border-beige-300"
+              className="mb-5 hover:border-b-2 hover:text-customBeige"
             >
               {/* Home link */}
               Home
             </Link>
             <Link
               href="/about"
-              className="mb-5 hover:border-b-2 hover:border-beige-300"
+              className="mb-5 hover:border-b-2 hover:text-customBeige"
             >
               {/* About link */}
               About
             </Link>
             <Link
               href="/ourcandles"
-              className="mb-5 hover:border-b-2 hover:border-beige-300"
+              className="mb-5 hover:border-b-2 hover:text-customBeige"
             >
               {/* Our Candles link */}
               Our Candles
             </Link>
             <Link
               href="/cart"
-              className="mb-5 hover:border-b-2 hover:border-beige-300"
+              className="mb-5 hover:border-b-2 hover:text-customBeige"
             >
               {/* Cart link */}
               Cart
@@ -62,7 +62,7 @@ export default function RootLayout({ children }) {
         <CookieBanner />
         <main className="relative">{children}</main>{' '}
         {/* Main content section */}
-        <footer className="border border-gray-300 shadow-md flex justify-center items-center bg-gray-100 min-h-24 font-serif sticky bottom-0">
+        <footer className="border border-gray-300 shadow-md flex justify-center items-center bg-gray-100 min-h-24 font-light sticky bottom-0">
           © Candle Cove by Johanna-Maria-Alexandra-Oprisan
         </footer>{' '}
         {/* Footer section */}
