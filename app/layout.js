@@ -17,7 +17,7 @@ export default function RootLayout({ children }) {
   // Root layout component
   return (
     <html lang="en">
-      <body className="">
+      <body className="font-light">
         {' '}
         <header className="border border-gray-300 shadow-md flex justify-center items-center bg-gray-100 min-h-24 relative">
           {' '}
@@ -27,7 +27,7 @@ export default function RootLayout({ children }) {
             alt="Logo" // Alt attribute for accessibility
             className="absolute top-0 left-0 w-40 h-auto z-10" // Logo image styles
           />
-          <nav className="flex justify-center items-center space-x-40 font-serif">
+          <nav className="flex justify-center items-center space-x-36 font-serif">
             {/* Navigation container */}
             <Link
               href="/"
@@ -51,13 +51,6 @@ export default function RootLayout({ children }) {
               Our Candles
             </Link>
             <Link
-              href="/help"
-              className="mb-5 hover:border-b-2 hover:border-beige-300"
-            >
-              {/* Help link */}
-              Help
-            </Link>
-            <Link
               href="/cart"
               className="mb-5 hover:border-b-2 hover:border-beige-300"
             >
@@ -67,8 +60,9 @@ export default function RootLayout({ children }) {
           </nav>
         </header>
         <CookieBanner />
-        <main>{children}</main> {/* Main content section */}
-        <footer className="border border-gray-300 shadow-md flex justify-center items-center bg-gray-100 min-h-24 font-serif">
+        <main className="relative">{children}</main>{' '}
+        {/* Main content section */}
+        <footer className="border border-gray-300 shadow-md flex justify-center items-center bg-gray-100 min-h-24 font-serif sticky bottom-0">
           © Candle Cove by Johanna-Maria-Alexandra-Oprisan
         </footer>{' '}
         {/* Footer section */}

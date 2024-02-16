@@ -2,12 +2,15 @@ import Link from 'next/link';
 
 const ThankYouPage = () => {
   return (
-    <div>
-      <h1>Thank You!</h1>
-      <p>Your order has been successfully placed.</p>
+    <div className="box-border p-8 border-4 text-center">
+      <h1 className="text-customBeige font-semibold">
+        Your order has been successfully placed.
+      </h1>
       <p>We will process your order shortly.</p>
       <p>Thank you for shopping with us!</p>
-      <Link href="/">Back to Home</Link>
+      <Link href="/" className="font-medium">
+        Back to Home
+      </Link>
     </div>
   );
 };

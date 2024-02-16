@@ -62,10 +62,10 @@ Manage Cart:
 
 Checkout Page:
 Collect Information:
-[]Collect shipping and payment information.
-[]Add HTML attributes for all form inputs.
-[]Ensure form prevents submission with empty fields.
-[]Implement confirm order button with data-test-id="checkout-confirm-order".
+[x]Collect shipping and payment information.
+[x]Add HTML attributes for all form inputs.
+[x]Ensure form prevents submission with empty fields.
+[x]Implement confirm order button with data-test-id="checkout-confirm-order".
 
 Cookies:
 Set up Cookie Management:

@@ -37,18 +37,19 @@ export default async function Candle(props: Props) {
   });
 
   return (
-    <div>
-      Single candle page
-      <h1 className="addstylehere">{singleCandle.productName}</h1>
-      <Image
-        src={`/images/${singleCandle.productName.toLowerCase().replace(/\s/g, '')}.JPG`}
-        alt={singleCandle.productName}
-        width={300}
-        height={200}
-        data-test-id="product-image"
-      />
-      <SetQuantityForm candleId={singleCandle.id} />
-      This is a nice candle.
+    <div className="container mx-auto px-8 ">
+      <h1 className="text-center text-xl pt-4 ">{singleCandle.productName}</h1>
+      <div className="styleitem border border-gray-300 rounded-md p-4 mb-4 flex items-center">
+        <Image
+          src={`/images/${singleCandle.productName.toLowerCase().replace(/\s/g, '')}.JPG`}
+          alt={singleCandle.productName}
+          width={300}
+          height={200}
+          data-test-id="product-image"
+          className="pr-4"
+        />
+        <SetQuantityForm candleId={singleCandle.id} />
+      </div>
     </div>
   );
 }

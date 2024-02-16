@@ -13,7 +13,10 @@ export default function RemoveButton({ candle }) {
 
   return (
     <div>
-      <button onClick={handleRemoveItem} className="styletheremovebutton">
+      <button
+        onClick={handleRemoveItem}
+        className="background-color: bg-customGray rounded py-2 px-4 "
+      >
         Remove Item
       </button>
     </div>

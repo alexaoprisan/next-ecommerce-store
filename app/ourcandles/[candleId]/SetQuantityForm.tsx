@@ -35,6 +35,7 @@ export default function SetQuantityForm(props: Props) {
             alert('Product added to cart!');
           }}
           data-test-id="product-add-to-cart"
+          className="background-color: bg-customBeige rounded py-2 px-4 "
         >
           Add to Cart
         </button>

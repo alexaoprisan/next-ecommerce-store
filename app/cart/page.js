@@ -35,9 +35,9 @@ export default async function CartPage() {
   );
 
   return (
-    <div className="sectioncontainerstyle">
+    <div className="container mx-auto px-8">
       <div>
-        <h1>Your Cart:</h1>
+        <h1 className="text-center text-xl pt-4 ">Your Cart</h1>
       </div>
       <div className="anothercontainerstyle">
         {candlesInCart.map((candle) => {
@@ -45,7 +45,7 @@ export default async function CartPage() {
             <div
               key={`candles-${candle.id}`}
               data-test-id={`cart-product-${candle.id}`}
-              className="styleitem"
+              className="styleitem border border-gray-300 rounded-md p-4 mb-4 flex items-center"
             >
               <Link
                 href={`/ourcandles/${candle.id}`}
@@ -60,7 +60,7 @@ export default async function CartPage() {
                   data-test-id="product-image"
                 />
               </Link>
-              <div className="stylehere">
+              <div className="stylehere ml-4 flex-grow">
                 <div className="styletheheadline">
                   <h2>{candle.title}</h2>
                 </div>
@@ -72,27 +72,28 @@ export default async function CartPage() {
                     Quantity: {candle.quantity}
                   </div>
                 </div>
-                <div data-test-id={`cart-product-remove-${candle.id}`}>
-                  <RemoveButton candle={candle} />
-                </div>
-                <br />
               </div>
-              {/* </Link> */}
+              <div data-test-id={`cart-product-remove-${candle.id}`}>
+                <RemoveButton
+                  candle={candle}
+                  className="bg-red-500 text-white py-2 px-4 rounded-md cursor-pointer"
+                />
+              </div>
             </div>
           );
         })}
       </div>
-      <div className="addstyle" />
-      <div className="stylecheckoutsection">
-        <div className="addtotalpricestyle" data-test-id="cart-total">
+      <div className="" />
+      <div className="text-right pr-2 pb-4">
+        <div className="font-light" data-test-id="cart-total">
           Total: {totalPrice} €
         </div>
-        <div>
+        <div className="">
           <Link
             href="/checkout"
             type="button"
             data-test-id="cart-checkout"
-            className="stylescheckoutbutton"
+            className="bg-customBeige text-white py-4 px-8 rounded-md font-medium"
           >
             Checkout
           </Link>

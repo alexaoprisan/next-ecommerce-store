@@ -12,11 +12,14 @@ export default async function CandlesPage() {
 
   return (
     <div>
-      These are my candles
+      <h1 className="text-center text-xl pt-4 pb-4">All</h1>
       <div className="flex flex-wrap justify-center ">
         {candles.map((candle) => {
           return (
-            <div key={`candles-${candle.id}`} className="m-6 w-64 h-100">
+            <div
+              key={`candles-${candle.id}`}
+              className="styleitem border border-gray-300 rounded-md p-4 mb-4 mr-10 flex items-center"
+            >
               <Link href={`/ourcandles/${candle.id}`}>
                 <div>{candle.productName}</div>
                 <Image
