@@ -93,13 +93,13 @@ Testing Suite:
 Design TODOs:
 UX Design:
 User Flows:
-[]Design user flows for login, signup, notification, and checkout processes.
-[]Create wireframes for all pages.
+[x]Design user flows for login, signup, notification, and checkout processes.
+[x]Create wireframes for all pages.
 
 Visual Design:
 Design System:
-[]Define color palette.
-[]Determine font sizes and styles.
+[x]Define color palette.
+[x]Determine font sizes and styles.
 []Design individual pages including user page, friend list, and notification popup.
 
 Data Modeling TODOs:

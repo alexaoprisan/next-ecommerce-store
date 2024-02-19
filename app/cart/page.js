@@ -56,7 +56,7 @@ export default async function CartPage() {
                   width={250}
                   height={300}
                   alt={candle.productName}
-                  className="styletheimage"
+                  className="object-contain h-96 w-192"
                   data-test-id="product-image"
                 />
               </Link>

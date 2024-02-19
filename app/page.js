@@ -15,7 +15,7 @@ export default function Home() {
             />
           </div>
           <div className="ml-4">
-            <h1 className="text-4xl drop-shadow">
+            <h1 className="text-4xl drop-shadow-md">
               Elevate Your Space with Candle Cove
             </h1>
             <p>
